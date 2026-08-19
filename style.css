@@ -1,0 +1,55 @@
+/*TELA DE LOADING*/
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+#loading-flower {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+}
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/*ESTRUTURA DO SITE*/
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
