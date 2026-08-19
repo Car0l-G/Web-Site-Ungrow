@@ -1,24 +1,5 @@
 /*TELA DE LOADING*/
 
-#loading-screen {
-    position: fixed;
-    inset: 0;
-
-    background-color: #000;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 9999;
-}
-
-#loading-flower {
-    width: 100px;
-    height: 100px;
-
-    object-fit: contain;
-}
 
 #loading-screen {
     position: fixed;
@@ -27,6 +8,7 @@
     background-color: #000;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -34,6 +16,51 @@
 
     opacity: 1;
     transition: opacity 0.5s ease;
+}
+
+#loading-flower {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#loading-text {
+    color: white;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-size: 18px;
+
+    margin-top: 15px;
+}
+
+.dots {
+    display: inline-block;
+    width: 20px;
+    text-align: left;
+    animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
 }
 
 /*ESTRUTURA DO SITE*/
@@ -46,10 +73,65 @@ body, html {
 .bgimg {
   background-position: center;
   background-size: cover;
-  background-image: url("/w3images/coffeehouse.jpg");
+  background-image: url("/imagens/Hollow-Knight-Silksong.jpg");
   min-height: 75%;
+
+  
 }
 
 .menu {
   display: none;
+}
+
+.title-ungrow {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Container posicionado logo abaixo do bloco de texto */
+.container-midia-exclusivo {
+  display: flex;
+  flex-direction: row;       /* Garante o alinhamento lado a lado */
+  justify-content: center;   /* Centraliza horizontalmente na tela */
+  align-items: flex-start;   /* Alinha o topo dos blocos */
+  gap: 30px;                 /* Distância perfeita entre os dois blocos */
+  margin: 40px auto;         /* Espaçamento em cima/baixo e centraliza o bloco */
+  max-width: 800px;          /* Limita a largura máxima para não espalhar muito */
+  padding: 0 20px;           /* Evita que cole nas bordas em telas menores */
+  box-sizing: border-box;
+}
+
+/* Bloco individual (Foto + Legenda) */
+.bloco-midia-item {
+  flex: 1;                   /* Faz ambos os blocos crescerem igualmente */
+  max-width: 350px;          /* Impede que fiquem gigantescos em telas grandes */
+  text-align: center;        /* Garante as legendas bem centralizadas */
+  margin: 0;                 /* Reseta margens fantasmas do navegador */
+}
+
+/* Configuração exclusiva das fotos em formato retangular */
+.bloco-midia-item img {
+  width: 100%;               /* Se adapta dinamicamente ao espaço disponível */
+  aspect-ratio: 16 / 9;      /* Força a imagem a manter a proporção de um retângulo perfeito */
+  object-fit: cover;         /* Corta e encaixa a foto sem achatar ou distorcer */
+  border-radius: 4px;        /* Suaviza os cantos da imagem */
+  display: block;            /* Remove espaçamentos inferiores indesejados de tags inline */
+  border: 4px solid #050505;        /* Adiciona uma borda sutil para destacar a imagem */
+
+}
+
+/* Estilização das legendas DEMO e TRAILER usando a sua fonte do site */
+.bloco-midia-item figcaption {
+  margin-top: 12px;          /* Distância exata entre a foto e o texto */
+  font-family: "Inconsolata", sans-serif; /* Puxa a mesma fonte do seu body */
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;       /* Dá um espaçamento elegante entre as letras */
+  text-transform: uppercase; /* Garante que fique em maiúsculo */
+}
+
+html {
+  scroll-behavior: smooth; /* Faz a rolagem deslizar suavemente */
 }

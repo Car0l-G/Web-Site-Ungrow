@@ -1,0 +1,62 @@
+
+/* Configurações Globais da Página */
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  background-color: #fafafa;
+}
+
+/* Cabeçalho Superior Preto */
+.topo-pagina-secundaria {
+  border-bottom: 4px solid #050505;
+  background-color: #000000;
+}
+
+.titulo-secundario {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 42px;
+  color: #ffffff;
+}
+
+.subtitulo-secundario {
+  font-family: "Inconsolata", sans-serif;
+  letter-spacing: 1px;
+  color: #aaaaaa;
+}
+
+/* Títulos das Seções */
+.titulo-bloco {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #050505;
+}
+
+/* Cards dos Integrantes da Equipe */
+.w3-card {
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505; /* Combina com o estilo do site */
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+/* Fotos de Perfil Redondas */
+.foto-perfil {
+  border: 3px solid #050505;
+  display: inline-block;
+}
+
+/* Nomes e Cargos */
+.w3-card h3 {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: bold;
+}
+
+.w3-card p {
+  font-family: "Inconsolata", sans-serif;
+  letter-spacing: 1px;
+}
