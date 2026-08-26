@@ -1,0 +1,297 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS E FUNDO CLARO
+========================================= */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  background-color: #fafafa; /* Mantém o fundo claro padrão das suas páginas secundárias */
+}
+
+.topo-pagina-secundaria {
+  background-color: #000;
+  width: 100%;
+}
+
+.barra-navegacao {
+  display: flex;
+  width: 100%;
+}
+
+.barra-navegacao a {
+  flex: 1;
+  text-align: center;
+  padding: 14px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.barra-navegacao a:hover, .barra-navegacao a.ativo {
+  background-color: #333;
+}
+
+/* CONTAINER PRINCIPAL CORRIDO */
+.container-artes {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.titulo-secundario-artes {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #dadada;
+  margin-bottom: 90px;
+  margin-top: 90px;
+}
+
+/* =========================================
+   SEÇÃO 1: 3 IMAGENS ALINHADAS HORIZONTALMENTE
+========================================= */
+.grid-tres-imagens {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.grid-tres-imagens .box-imagem {
+  flex: 1;
+  height: 200px;
+  background-color: #cccccc;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505;
+  border-radius: 6px;
+}
+
+/* =========================================
+   TEXTOS CENTRALIZADOS E DIVISORES
+========================================= */
+.texto-central {
+  text-align: center;
+  max-width: 650px;
+  margin: 30px auto;
+  color: #c4c4c4;
+  line-height: 1.6;
+}
+
+.divisor-artes {
+  width: 40%;
+  height: 4px;
+  background-color: #050505;
+  margin: 30px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================================
+   SEÇÃO 3: MOLDURA COMPLEXA (FLEXBOX TRÊS COLUNAS)
+========================================= */
+.layout-moldura {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+  margin: 40px 0;
+}
+
+.coluna-lateral-img {
+  width: 100px;
+  background-color: #cccccc;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.centro-moldura {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: #c4c4c4;
+}
+
+.centro-moldura p {
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.box-imagem-centro {
+  width: 100%;
+  height: 140px;
+  background-color: #cccccc;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505;
+  border-radius: 6px;
+}
+
+/* =========================================
+   SEÇÃO 5: IMAGEM LATERAL COM TEXTO CORRIDO
+========================================= */
+.bloco-lateral-artes {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.box-imagem-lateral {
+  width: 180px;
+  height: 180px;
+  background-color: #cccccc;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.texto-lateral-artes {
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SEÇÃO 6: BANNER HORIZONTAL GRANDE
+========================================= */
+.banner-largo-artes {
+  margin: 40px 0 60px;
+}
+
+.box-banner-horizontal {
+  width: 100%;
+  height: 120px;
+  background-color: #cccccc;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505;
+  border-radius: 6px;
+}
+
+/* =========================================
+   RODAPÉ PADRÃO
+========================================= */
+footer {
+  background: #d0d0d0;
+  color: #222;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: auto;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.powered-by {
+  margin-top: 30px;
+  font-size: 10px;
+}
+
+/* RESPONSIVO MOBILE */
+@media (max-width: 600px) {
+  .grid-tres-imagens, .layout-moldura, .bloco-lateral-artes {
+    flex-direction: column;
+  }
+  .coluna-lateral-img {
+    width: 100%;
+    height: 150px;
+  }
+  .box-imagem-lateral {
+    width: 100%;
+  }
+}
+
+/*BARRA DE NAVEGAÇÃO*/
+
+.barra-navegacao {
+  display: flex;
+  width: 100%;
+}
+
+.barra-navegacao .w3-col {
+  flex: 1;
+}
+
+.barra-navegacao a {
+  transition: 0.3s;
+}
+
+.barra-navegacao a:hover {
+  background-color: #333 !important;
+}
+
+/* =========================================
+   FUNDO DA PÁGINA
+========================================= */
+
+.pagina-jogo {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #080808 15%,
+    #181818 35%,
+    #353535 55%,
+    #5a5a5a 75%,
+    #858585 100%
+  );
+
+  padding-top: 50px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: #d0d0d0;
+  color: #222;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: auto;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.powered-by {
+  margin-top: 70px;
+  font-size: 10px;
+}
+
+.personagem-footer {
+  width: 100px;
+  margin-top: 15px;
+}

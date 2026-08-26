@@ -63,6 +63,9 @@
 
 }
 
+
+
+
 /*ESTRUTURA DO SITE*/
 
 body, html {
@@ -74,9 +77,19 @@ body, html {
   background-position: center;
   background-size: cover;
   background-image: url("/imagens/Hollow-Knight-Silksong.jpg");
-  min-height: 75%;
+  min-height: 350px;
+ 
+}
 
-  
+.espaco-separador {
+  padding-bottom: 0px !important; /* Cria o espaço vazio mantendo a cor do fundo */
+  background: transparent !important; /* Garante que nenhuma cor sólida bloqueie o degradê */
+}
+
+/* Garante que o container de contatos também não force um fundo branco antes da hora */
+#where {
+  background: transparent !important;
+  margin-top: 0 !important;
 }
 
 .menu {
@@ -88,7 +101,80 @@ body, html {
     z-index: 1;
 }
 
+.pagina-jogo {
+  min-height: 100vh;
 
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #080808 15%,
+    #181818 35%,
+    #353535 55%,
+    #5a5a5a 75%,
+    #858585 100%
+  );
+
+  padding-top: 50px;
+}
+
+/* Estilização para o Botão do tipo Link (<a>) */
+.meu-botao-link {
+  display: inline-block;        /* Permite aplicar tamanho e espaçamento */
+  background-color: #333;       /* Cor de fundo escura */
+  color: #fff;                  /* Cor do texto branca */
+  text-decoration: none;        /* Remove o sublinhado de link */
+  padding: 12px 24px;           /* Altura e largura interna do botão */
+  font-family: "Inconsolata", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;          /* Espaçamento elegante entre as letras */
+  border-radius: 4px;           /* Suaviza os cantos do botão */
+  transition: background-color 0.3s, transform 0.2s; /* Efeito suave ao interagir */
+  cursor: pointer;
+ 
+  
+  display: block;       /* Transforma o elemento em um bloco rígido */
+  width: fit-content;   /* Força o botão a ter apenas o tamanho do texto interno */
+  margin: 25px auto;    /* O "auto" calcula espaços iguais na esquerda e direita, centralizando-o */
+}
+
+/* Efeito ao passar o mouse por cima do botão (Hover) */
+.meu-botao-link:hover {
+  background-color: #555;       /* Clareia o botão sutilmente */
+  transform: translateY(-2px);  /* Dá um leve efeito de flutuar */
+}
+
+/* Efeito ao clicar no botão */
+.meu-botao-link:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   BARRA DE NAVEGAÇÃO COMPATÍVEL
+========================================= */
+
+.barra-navegacao {
+  display: flex;            /* Coloca os links lado a lado de forma flexível */
+  width: 100%;
+  background-color: #000;   /* Fundo preto padrão */
+  box-sizing: border-box;
+}
+
+.barra-navegacao a {
+  flex: 1;                  /* Faz cada um dos 5 links ter exatamente o mesmo tamanho */
+  text-align: center;       /* Centraliza o texto dentro do botão */
+  padding: 14px 0;          /* Altura interna do botão (espaço em cima e embaixo) */
+  color: #fff;              /* Cor do texto branca */
+  text-decoration: none;    /* Remove o sublinhado padrão de links */
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s; /* Transição suave para o efeito de passar o mouse */
+}
+
+/* Efeito ao passar o mouse por cima do link */
+.barra-navegacao a:hover {
+  background-color: #222;   /* Tom cinza escuro sutil ao passar o mouse */
+}
 
 /* Container posicionado logo abaixo do bloco de texto */
 .container-midia-exclusivo {
@@ -135,3 +221,45 @@ body, html {
 html {
   scroll-behavior: smooth; /* Faz a rolagem deslizar suavemente */
 }
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: #d0d0d0;
+  color: #222;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: auto;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.powered-by {
+  margin-top: 70px;
+  font-size: 10px;
+}
+
+.personagem-footer {
+  width: 100px;
+  margin-top: 15px;
+}
+
+

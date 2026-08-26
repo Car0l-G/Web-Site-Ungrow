@@ -1,64 +1,336 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
 
-
-/* Configurações Globais da Página */
-body, html {
-  height: 100%;
+html,
+body {
+  margin: 0;
+  min-height: 100%;
   font-family: "Inconsolata", sans-serif;
-  background-color: #f5f5f5; /* Um cinza bem claro para diferenciar o fundo */
+  color: white;
+  background: #000;
 }
 
-/* Cabeçalho Superior Preto */
-.topo-pagina-secundaria {
-  border-bottom: 4px solid #050505;
-  background-color: #000000;
-}
 
-.titulo-secundario {
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
-  letter-spacing: 4px;
-  font-size: 42px;
-  color: #ffffff;
-}
 
-.subtitulo-secundario {
-  font-family: "Inconsolata", sans-serif;
-  letter-spacing: 1px;
-  color: #aaaaaa;
-}
+/* =========================================
+   BARRA DE NAVEGAÇÃO
+========================================= */
 
-/* Títulos dos Blocos de Conteúdo */
-.titulo-bloco {
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-  color: #080808;
-}
-
-/* Estilização dos Textos */
-p {
-  line-height: 1.6;
-  color: #333333;
-}
-
-/* Imagens da Gameplay / Screenshots */
-.foto-interna {
-  border: 4px solid #030303;
+.barra-navegacao {
+  display: flex;
   width: 100%;
-  box-shadow: 5px 5px 0px #080808; /* Sombra sólida estilo cartoon/HQ */
-  transition: transform 0.2s ease;
 }
 
-.foto-interna:hover {
-  transform: scale(1.02); /* Efeito sutil ao passar o mouse */
+.barra-navegacao .w3-col {
+  flex: 1;
 }
 
-/* Linha Divisória Tracejada */
-.divisor-sutil {
-  border: 0;
-  border-top: 2px dashed #0a0a0a;
-  margin: 40px 0;
+.barra-navegacao a {
+  transition: 0.3s;
 }
 
+.barra-navegacao a:hover {
+  background-color: #333 !important;
+}
+
+/* =========================================
+   FUNDO DA PÁGINA
+========================================= */
+
+.pagina-jogo {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #080808 15%,
+    #181818 35%,
+    #353535 55%,
+    #5a5a5a 75%,
+    #858585 100%
+  );
+
+  padding-top: 50px;
+}
+
+
+/* =========================================
+   CONTAINER DO CONTEÚDO
+========================================= */
+
+.conteudo-jogo {
+  width: 85%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================================
+   TEXTO PRINCIPAL
+========================================= */
+
+.bloco-texto {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.bloco-texto h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+.bloco-texto p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white;
+  margin: 25px 0;
+}
+
+/* =========================================
+   LINHAS DIVISÓRIAS
+========================================= */
+
+.divisor {
+  width: 80%;
+  height: 2px;
+  border: none;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 35px auto;
+}
+
+/* =========================================
+   BLOCOS COM IMAGEM + TEXTO
+========================================= */
+
+.bloco-historia {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 35px 0;
+}
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+.imagem-fade {
+  position: relative;
+
+  width: 55%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.imagem-fade img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   FADE DA IMAGEM
+========================================= */
+
+.imagem-fade::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    transparent 45%,
+    rgba(0, 0, 0, 0.15) 60%,
+    rgba(0, 0, 0, 0.65) 85%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   TEXTO AO LADO DA IMAGEM
+========================================= */
+
+.texto-lateral {
+  flex: 1;
+  text-align: center;
+}
+
+.texto-lateral h2 {
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: normal;
+  margin: 0 0 15px;
+}
+
+.texto-lateral p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: white;
+}
+
+/* =========================================
+   BLOCO DE IMAGEM GRANDE
+========================================= */
+
+.imagem-grande {
+  width: 85%;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagem-grande img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   FADE DA IMAGEM GRANDE
+========================================= */
+
+.imagem-grande::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   PEQUENAS IMAGENS / ELEMENTOS
+========================================= */
+
+.elementos-jogo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 25px auto;
+  height: 80px;
+}
+
+.elemento {
+  width: 45px;
+  height: 45px;
+  background-image: url("imagens/Hollow-Knight-Silksong.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+/* Elementos centrais maiores */
+
+.elemento:nth-child(3) {
+  width: 65px;
+  height: 65px;
+}
+
+/* =========================================
+   BLOCO "EXISTE UMA ESPERANÇA"
+========================================= */
+
+.esperanca {
+  text-align: center;
+  margin: 35px auto 60px;
+  max-width: 700px;
+}
+
+.esperanca h2 {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.esperanca p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: white;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: #d0d0d0;
+  color: #222;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: auto;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.powered-by {
+  margin-top: 70px;
+  font-size: 10px;
+}
+
+.personagem-footer {
+  width: 100px;
+  margin-top: 15px;
+}
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+  .bloco-historia {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .imagem-fade {
+    width: 100%;
+  }
+
+  .texto-lateral {
+    width: 90%;
+  }
+
+  .titulo-historia {
+    font-size: 25px;
+  }
+
+  .elementos-jogo {
+    gap: 7px;
+  }
+
+  .elemento {
+    width: 35px;
+    height: 35px;
+  }
+
+  .elemento:nth-child(3) {
+    width: 50px;
+    height: 50px;
+  }
+}

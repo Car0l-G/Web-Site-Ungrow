@@ -3,13 +3,30 @@
 body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
-  background-color: #fafafa;
+  background-color: #fdf5e6;
 }
 
 /* Cabeçalho Superior Preto */
 .topo-pagina-secundaria {
   border-bottom: 4px solid #050505;
   background-color: #000000;
+}
+
+.barra-navegacao {
+  display: flex;
+  width: 100%;
+}
+
+.barra-navegacao .w3-col {
+  flex: 1;
+}
+
+.barra-navegacao a {
+  transition: 0.3s;
+}
+
+.barra-navegacao a:hover {
+  background-color: #333 !important;
 }
 
 .titulo-secundario {
@@ -26,37 +43,148 @@ body, html {
   color: #aaaaaa;
 }
 
-/* Títulos das Seções */
-.titulo-bloco {
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
+
+
+/* =========================================
+   ESTRUTURAÇÃO DO LAYOUT "SOBRE NÓS"
+========================================= */
+
+/* Container que centraliza o conteúdo na tela */
+.conteudo-sobrenos {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto 0;
+  min-height: calc(100vh - 350px);
+}
+
+/* Container para empilhar verticalmente os cards dos integrantes */
+.lista-integrantes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Distância entre um card e outro */
+  margin-bottom: 50px;
+}
+
+/* Configuração do Card para alinhar a foto na esquerda e texto na direita */
+.card-integrante {
+  display: flex;
+  align-items: center; /* Alinha os textos verticalmente com o centro da foto */
+  gap: 25px;           /* Distância entre a foto e o bloco de texto */
+  padding: 20px;       /* Espaçamento interno do card */
+}
+
+/* Força a foto de perfil a ser quadrada e manter o estilo do seu site */
+.foto-perfil-quadrada {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border: 3px solid #050505;
+  border-radius: 4px; /* Levemente suavizado como seus cards */
+  flex-shrink: 0;     /* Impede que a foto seja esmagada pelo texto */
+}
+
+/* Bloco de texto ao lado da foto */
+.info-integrante {
+  flex: 1;
+}
+
+.info-integrante h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
   color: #050505;
 }
 
-/* Cards dos Integrantes da Equipe */
-.w3-card {
+.info-integrante p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* =========================================
+   BANNER DESTAQUE (RETÂNGULO GRANDE)
+========================================= */
+.banner-destaque-sobrenos {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.banner-destaque-sobrenos img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 5; /* Formato retangular bem horizontal conforme o desenho */
+  object-fit: cover;
   border: 3px solid #050505;
-  box-shadow: 4px 4px 0px #050505; /* Combina com o estilo do site */
+  box-shadow: 4px 4px 0px #050505; /* Mesma sombra blocada dos cards */
   border-radius: 6px;
-  background-color: #ffffff;
+  display: block;
 }
 
-/* Fotos de Perfil Redondas */
-.foto-perfil {
-  border: 3px solid #050505;
-  display: inline-block;
+/* RESPONSIVO: Ajuste automático para telas de celular */
+@media (max-width: 600px) {
+  .card-integrante {
+    flex-direction: column; /* Empilha a foto em cima do texto no mobile */
+    text-align: center;
+  }
 }
 
-/* Nomes e Cargos */
-.w3-card h3 {
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: #d0d0d0;
+  color: #222;
+  padding: 40px 20px 30px;
+  text-align: center;
+  margin-top: 0;;
 }
 
-.w3-card p {
-  font-family: "Inconsolata", sans-serif;
-  letter-spacing: 1px;
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: auto;
 }
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.powered-by {
+  margin-top: 70px;
+  font-size: 10px;
+}
+
+.personagem-footer {
+  width: 100px;
+  margin-top: 15px;
+}
+
+/* =========================================
+   FUNDO DA PÁGINA
+========================================= */
+
+/*.pagina-jogo {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #080808 15%,
+    #181818 35%,
+    #353535 55%,
+    #5a5a5a 75%,
+    #858585 100%
+  );
+
+  padding-top: 50px;
+}
+*/
+

@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Inconsolata"
     />
 
-    <!--LINK DA FINTE DA TELA LOADING-->
+    <!--LINK DA FONTE DA TELA LOADING-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +21,7 @@
     <title>Ungrow</title>
   </head>
   <body>
+    <main class="pagina-jogo">
     <!-- Tela de Loading -->
     <div id="loading-screen">
       <img id="loading-flower" src="assets/flor1.png" alt="Carregando" />
@@ -30,26 +31,19 @@
     <script src="script.js"></script>
 
     <!--ESTRUTURA DO SITE-->
+    
 
     <!-- Links (sit on top) -->
       <div class="w3-top">
-      <div class="w3-row w3-padding w3-black barra-navegacao">
-        <div class="w3-col s3">
-          <a href="#home" class="w3-button w3-block w3-black">HOME</a>
-        </div>
-        <div class="w3-col s3">
-        
-          <a href="navegacao/sobreojogo.html" class="w3-button w3-block w3-black">SOBRE O JOGO</a>
-        </div>
-        <div class="w3-col s3">
-          
-          <a href="navegacao/sobrenos.html" class="w3-button w3-block w3-black">SOBRE NÓS</a>
-        </div>
-        <div class="w3-col s3">
-          <a href="#contato" class="w3-button w3-block w3-black">CONTATO</a>
-        </div>
-      </div>
-    </div>
+  <div class="barra-navegacao">
+    <a href="#home">HOME</a>
+    <a href="navegacao/sobreojogo.html">SOBRE O JOGO</a>
+    <a href="navegacao/sobrenos.html">SOBRE NÓS</a>
+    <a href="navegacao/conceptart.html">CONCEPT ART</a>
+    <a href="#contato">CONTATO</a>
+  </div>
+</div>
+
 
     <!-- Header com imagem (HOME) -->
     <header class="bgimg w3-display-container w3-grayscale-min" id="home">
@@ -58,6 +52,7 @@
       </div>
     </header>
 
+    
     <!-- Fotos abaixo do header (Demo e Trailer) -->
     <section class="container-midia-exclusivo">
       <figure class="bloco-midia-item">
@@ -72,18 +67,24 @@
     </section>
 
     <!-- Conteúdo Principal do Site -->
-    <div class="w3-sand w3-grayscale w3-large">
+    <div class="w3-large container-conteudo-gradual">
 
-        <!-- Seção do Prólogo -->
-        <div class="w3-container" id="about">
-          <div class="w3-content" style="max-width:700px">
-            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">PRÓLOGO</span></h5>
-            <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
-          </div>
+      <!-- Seção do Prólogo -->
+      <div class="w3-container espaco-separador" id="about">
+        <div class="w3-content" style="max-width:700px">
+          <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">PRÓLOGO</span></h5>
+          <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
         </div>
+        <div>
+          <a href="navegacao/sobreojogo.html" class="meu-botao-link">SAIBA MAIS</a>
+        </div>
+        
+      </div>
 
-         
+      
+
+         </main>
         <!-- Contact/Area Container -->
         <div class="w3-container" id="where" style="padding-bottom: 32px">
           <div class="w3-content" style="max-width: 700px">
@@ -97,7 +98,7 @@
               abaixo.
             </p>
 
-            <form
+            <main
               action="/action_page.php"
               method="POST"
               target="_blank"
@@ -137,17 +138,54 @@
                   ENVIAR
                 </button>
               </p>
+            
             </form>
           </div>
         </div>
       </div>
 
+      
+
       <!-- End page content -->
     </div>
 
-    <!-- Footer -->
-    <!--<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>-->
+    <!-- ==========================
+             FOOTER
+        =========================== -->
+
+        <footer>
+
+            <div class="footer-links">
+
+                <a href="../index.html#home">
+                    HOME
+                </a>
+
+                <a href="../navegacao/sobreojogo.html">
+                    SOBRE O JOGO
+                </a>
+
+                <a href="../navegacao/sobrenos.html">
+                    SOBRE NÓS
+                </a>
+
+                <a href="../navegacao/conceptart.html">
+                    CONCEPT ART
+                </a>
+
+                <a href="index.html#contato">
+                    CONTATO
+                </a>
+
+            </div>
+
+
+            <div class="powered-by">
+                POWERED BY
+            </div>
+
+
+          
+        </footer>
   </body>
 </html>
