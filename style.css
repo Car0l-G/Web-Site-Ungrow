@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Ungrow-Regular';
+  src: url(../Web-Site-Ungrow/fonts/Ungrow-Regular.otf);
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /*TELA DE LOADING*/
 
 
@@ -68,9 +76,13 @@
 
 /*ESTRUTURA DO SITE*/
 
+
+
 body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
+  font-family: 'Ungrow-Regular';
+
 }
 
 .bgimg {
