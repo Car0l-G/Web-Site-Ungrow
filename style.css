@@ -85,23 +85,171 @@ body, html {
 
 }
 
+p {
+  font-size: 30px;
+}
+
 .bgimg {
-  background-position: center;
+  .bgimg {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 450px !important; 
+  min-height: 450px !important; 
+  
+  background-position: center top; 
   background-size: cover;
-  background-image: url("/imagens/Hollow-Knight-Silksong.jpg");
-  min-height: 350px;
+  background-repeat: no-repeat;
+  background-image: url("banner.png"); 
+}
  
 }
 
+/* O EFEITO DE FADE PRETO NO MEIO (Área Vermelha)
+   Usamos um gradiente radial. Ele começa com preto intenso no centro (0%) 
+   e vai clareando/desfocando de forma muito suave até ficar 100% transparente nas pontas */
+.bgimg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+     at center, 
+    rgba(0, 0, 0, 1) 0%,       /* Preto total no centro */
+    rgba(0, 0, 0, 0.93) 30%,      /* <--- Aumentado! Mantém o breu total cobrindo todo o texto */
+    rgba(0, 0, 0, 0.7) 150%,    /* Transição suave na área intermediária */
+    rgba(0, 0, 0, 0) 85%       /* Abre completamente para mostrar o cenário e a aranha */
+  );
+  z-index: 1;
+}
+
+.bgimg::after {
+  content: "";
+  position: absolute;
+  
+  /* Posicionamento na área azul */
+  top: 3%;                  /* Altura em relação ao topo do banner */
+  right: 0%;                /* Distância da borda direita para encaixar no vão das árvores */
+  
+  /* Tamanho da aranha */
+  width: 800px;              /* Ajuste a largura se achar necessário */
+  height: 800px;             /* Ajuste a altura para acompanhar */
+  
+  background-image: url("../Web-Site-Ungrow/imagens/aranha.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  pointer-events: none;
+   z-index: 10000 !important; 
+}
+
+/* CORREÇÃO DEFINITIVA DO TÍTULO POR CIMA
+   Aplicamos o z-index na classe do W3.CSS que envelopa o título */
+.w3-display-middle {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100%;
+  z-index: 3 !important; /* <--- Isso joga o container do W3.CSS inteiro para a frente */
+}
+
+/* GARANTIA DE DESTAQUE DO TÍTULO */
+.title-ungrow {
+  position: relative;
+  z-index: 4 !important;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DOS BOTÕES EXCLUSIVOS (ESTILO STEAM DA REFERÊNCIA)
+   ========================================================================== */
+
+/* Container que alinha os dois botões lado a lado e os centraliza na tela */
+.container-botoes-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;                 /* Espaço entre os dois botões */
+  margin: 40px auto 20px auto; /* Margem para afastar do banner e das fotos de baixo */
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Base comum para ambos os botões */
+.container-botoes-banner a {
+  flex: 1;                   /* Faz ambos terem exatamente o mesmo tamanho máximo */
+  max-width: 280px;          /* Limita a largura para ficarem elegantes */
+  height: 50px;              /* Altura idêntica à da imagem de referência */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;     /* Remove o sublinhado de link */
+  font-family: 'Ungrow-Regular', "Inconsolata", sans-serif !important;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;       /* Espaçamento elegante entre as letras */
+  text-transform: uppercase; /* Força letras maiúsculas */
+  transition: all 0.3s ease; /* Transição suave para o efeito hover */
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Espaçamento para afastar o ícone do texto */
+.icone-btn {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* 1. BOTÃO WISHLIST (Amarelo Sólido com escrita escura) */
+.btn-steam-amarelo {
+  background-color: #ffffff !important; /* Tom de dourado/amarelo envelhecido da imagem */
+  color: #111111 !important;            /* Texto escuro para contraste */
+  border: none !important;
+}
+
+.btn-steam-amarelo:hover {
+  background-color: #b08842 !important; /* Escurece levemente ao passar o mouse */
+  transform: translateY(-2px);          /* Leve efeito de flutuar */
+}
+
+/* 2. BOTÃO ASSISTIR TRAILER (Fundo escuro com borda e texto dourados) */
+.btn-trailer-vazado {
+  background-color: #161616 !important; /* Fundo grafite muito escuro */
+  color: #ffffff !important;            /* Texto dourado */
+  border: 1px solid #ffffff !important; /* Borda fina dourada */
+}
+
+.btn-trailer-vazado:hover {
+  background-color: #c9a054 !important; /* Inverte: fundo fica dourado */
+  color: #111111 !important;            /* Texto fica escuro */
+  transform: translateY(-2px);
+}
+
+.logo-steam-btn {
+  height: 18px !important;    /* Força a imagem a ficar pequena, na altura do texto */
+  width: auto !important;     /* Mantém a proporção correta para não achatar */
+  margin-right: 10px !important; /* Cria um espaçamento perfeito entre a logo e o texto */
+  vertical-align: middle;     /* Alinha o centro da imagem com o centro do texto */
+  display: inline-block;
+}
+
+
+
+
+
 .espaco-separador {
-  padding-bottom: 0px !important; /* Cria o espaço vazio mantendo a cor do fundo */
+  padding-bottom: 90px !important; /* Cria o espaço vazio mantendo a cor do fundo */
   background: transparent !important; /* Garante que nenhuma cor sólida bloqueie o degradê */
+  display: block !important;
 }
 
 /* Garante que o container de contatos também não force um fundo branco antes da hora */
 #where {
   background: transparent !important;
-  margin-top: 0 !important;
+  margin-top: 60px !important;
 }
 
 .menu {
@@ -137,7 +285,7 @@ body, html {
   text-decoration: none;        /* Remove o sublinhado de link */
   padding: 12px 24px;           /* Altura e largura interna do botão */
   font-family: "Inconsolata", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;          /* Espaçamento elegante entre as letras */
   border-radius: 4px;           /* Suaviza os cantos do botão */
@@ -178,7 +326,7 @@ body, html {
   padding: 14px 0;          /* Altura interna do botão (espaço em cima e embaixo) */
   color: #fff;              /* Cor do texto branca */
   text-decoration: none;    /* Remove o sublinhado padrão de links */
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 1px;
   transition: background-color 0.3s; /* Transição suave para o efeito de passar o mouse */
 }
@@ -188,6 +336,13 @@ body, html {
   background-color: #222;   /* Tom cinza escuro sutil ao passar o mouse */
 }
 
+.w3-top {
+  z-index: 9999 !important; /* Joga o container fixado do W3.CSS para cima de todo o banner */
+}
+
+
+
+
 /* Container posicionado logo abaixo do bloco de texto */
 .container-midia-exclusivo {
   display: flex;
@@ -195,7 +350,7 @@ body, html {
   justify-content: center;   /* Centraliza horizontalmente na tela */
   align-items: flex-start;   /* Alinha o topo dos blocos */
   gap: 30px;                 /* Distância perfeita entre os dois blocos */
-  margin: 40px auto;         /* Espaçamento em cima/baixo e centraliza o bloco */
+  margin: 40px auto ;         /* Espaçamento em cima/baixo e centraliza o bloco */
   max-width: 800px;          /* Limita a largura máxima para não espalhar muito */
   padding: 0 20px;           /* Evita que cole nas bordas em telas menores */
   box-sizing: border-box;
@@ -225,7 +380,7 @@ body, html {
   margin-top: 12px;          /* Distância exata entre a foto e o texto */
   font-family: "Inconsolata", sans-serif; /* Puxa a mesma fonte do seu body */
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 2px;       /* Dá um espaçamento elegante entre as letras */
   text-transform: uppercase; /* Garante que fique em maiúsculo */
 }
@@ -240,8 +395,8 @@ html {
 ========================================= */
 
 footer {
-  background: #d0d0d0;
-  color: #222;
+  background: #000000;
+  color: #ffffff;
   padding: 30px 20px;
   text-align: center;
   margin-top: 70px;
@@ -255,9 +410,9 @@ footer {
 }
 
 .footer-links a {
-  color: #222;
+  color: #f7f7f7;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .footer-links a:hover {
@@ -266,7 +421,7 @@ footer {
 
 .powered-by {
   margin-top: 70px;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 .personagem-footer {

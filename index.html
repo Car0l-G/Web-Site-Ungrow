@@ -46,25 +46,33 @@
 
 
     <!-- Header com imagem (HOME) -->
-    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <!--<header class="bgimg w3-display-container w3-grayscale-min" id="home">
       <div class="w3-display-middle w3-center">
         <span class="w3-text-white" style="font-size:90px">UNGROW<br></span>
       </div>
+    </header>-->
+
+    <header class="bgimg w3-display-container" id="home">
+      <!-- Aranha posicionada de forma absoluta dentro do banner -->
+      <img src="../Web-Site-Ungrow/imagens/banner.png" alt="Aranha" class="aranha-banner" />
+      
+      <div class="w3-display-middle w3-center">
+        <span class="w3-text-white title-ungrow" style="font-size:90px; font-family: 'Ungrow-Regular';">UNGROW<br></span>
+      </div>
     </header>
 
+    <!-- botores de demo e trailer-->
+     <div class="container-botoes-banner">
+      <a href="URL_DA_SUA_STEAM" target="_blank" class="btn-steam-amarelo">
+        <!-- Ícone da Steam simplificado via caractere/SVG se preferir, ou apenas o texto -->
+        <span class="icone-btn"> <img src="../Web-Site-Ungrow/imagens/steamlogo.png" alt="Steam" class="logo-steam-btn" /> WISHLIST NA STEAM
+      </a>
+      
+      <a href="#TRAILER" class="btn-trailer-vazado">
+        <span class="icone-btn">▶</span> ASSISTIR TRAILER
+      </a>
+    </div>
     
-    <!-- Fotos abaixo do header (Demo e Trailer) -->
-    <section class="container-midia-exclusivo">
-      <figure class="bloco-midia-item">
-        <img src="imagens/Hollow-Knight-Silksong.jpg" alt="Versão Demo">
-        <figcaption>DEMO</figcaption>
-      </figure>
-
-      <figure class="bloco-midia-item">
-        <img src="imagens/Hollow-Knight-Silksong.jpg" alt="Assista ao Trailer">
-        <figcaption>TRAILER</figcaption>
-      </figure>
-    </section>
 
     <!-- Conteúdo Principal do Site -->
     <div class="w3-large container-conteudo-gradual">
@@ -81,6 +89,19 @@
         </div>
         
       </div>
+
+      <!-- Fotos abaixo do prologo (Demo e Trailer) -->
+    <section class="container-midia-exclusivo">
+      <figure class="bloco-midia-item">
+        <img src="imagens/Hollow-Knight-Silksong.jpg" alt="Versão Demo">
+        <figcaption>DEMO</figcaption>
+      </figure>
+
+      <figure class="bloco-midia-item">
+        <img src="imagens/Hollow-Knight-Silksong.jpg" alt="Assista ao Trailer">
+        <figcaption>TRAILER</figcaption>
+      </figure>
+    </section>
 
       
 
@@ -181,7 +202,7 @@
 
 
             <div class="powered-by">
-                POWERED BY
+                © 2026 Ungrow. Todos os direitos reservados.
             </div>
 
 
