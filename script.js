@@ -101,3 +101,11 @@ function openMenu(evt, menuName) {
 }
 
 document.getElementById("myLink").click();
+
+
+/*==========================
+  POP-UP DE AKIRA
+=========================== */
+//CODIGO FOI TRANSFIRIDO PARA O ARQUIVO INDEX POR PROBLEMAS DE FUNCIONAMENTO, POIS O SCRIPT.JS É CARREGADO ANTES DO HTML, E O POP-UP NÃO CONSEGUIA SER ACESSADO.
+// CÓDIGO SE ENCONTRA NAS LINHAS 141 A 165 DO NDEX.HTML
+

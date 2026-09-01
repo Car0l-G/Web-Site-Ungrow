@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Ungrow-Regular";
+  src: url(../Web-Site-Ungrow/fonts/Ungrow-Regular.otf);
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* =========================================
    CONFIGURAÇÕES GERAIS
 ========================================= */
@@ -9,6 +17,7 @@ body {
   font-family: "Inconsolata", sans-serif;
   color: white;
   background: #000;
+  font-family: "Ungrow-Regular";
 }
 
 
@@ -266,7 +275,7 @@ body {
 footer {
   background: #000000;
   color: #ffffff;
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
   margin-top: 70px;
 }
@@ -286,6 +295,24 @@ footer {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 25px; /* Espaço abaixo do menu principal */
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Distância entre os ícones */
+}
+
+.footer-social a {
+  color: #f7f7f7;
+  font-size: 24px; /* Tamanho visível para os ícones */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: #999999; /* Cor que o ícone assume ao passar o mouse */
+  transform: scale(1.1); /* Efeito suave de crescimento */
 }
 
 .powered-by {

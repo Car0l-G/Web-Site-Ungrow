@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link rel="stylesheet" href="https://cloudflare.com">
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inconsolata"
@@ -21,6 +23,10 @@
     <title>Ungrow</title>
   </head>
   <body>
+
+
+
+    
     <main class="pagina-jogo">
     <!-- Tela de Loading -->
     <div id="loading-screen">
@@ -28,10 +34,10 @@
       <div id="loading-text">LOADING<span class="dots">...</span></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../Web-Site-Ungrow/script.js"></script>
 
     <!--ESTRUTURA DO SITE-->
-    
+  
 
     <!-- Links (sit on top) -->
       <div class="w3-top">
@@ -81,13 +87,10 @@
       <div class="w3-container espaco-separador" id="about">
         <div class="w3-content" style="max-width:700px">
           <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">PRÓLOGO</span></h5>
-          <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+          <p>Em um mundo onde as cores já se perderam, o fracasso já tomou conta, e o desespero é seu unico parceiro, a esperança se tornou seu ponto seguro</p>
+          <p>Mas a esperança uma hora morre, e as cores uma hora somem. Insista, recupere a esperança, traga cores ao mundo dominado pela solidão e tenha esperança </p>
         </div>
-        <div>
-          <a href="navegacao/sobreojogo.html" class="meu-botao-link">SAIBA MAIS</a>
-        </div>
-        
+      
       </div>
 
       <!-- Fotos abaixo do prologo (Demo e Trailer) -->
@@ -103,7 +106,73 @@
       </figure>
     </section>
 
+    <div class="w3-container espaco-separador" id="about">
+        <div class="w3-content" style="max-width:700px">
+          <p>Um novo mundo espera por você. Explore cenários desconhecidos, descubra seus segredos, enfrente criaturas e desafie chefões em batalhas inesquecíveis. Com uma jogabilidade leve e envolvente, cada descoberta pode ser o começo de uma nova aventura. A cada passo, novos desafios surgem e novas histórias estão esperando para serem descobertas.</p>
+          <p>Explore. Descubra. Enfrente. Sobreviva.</p>
+        </div>
+  
+    
+    <div>
+          <a href="navegacao/sobreojogo.html" class="meu-botao-link">SAIBA MAIS</a>
+        </div>
+
       
+
+
+
+
+
+        <!-- ==========================
+             POP-UP DE AKIRA
+        =========================== -->
+<div id="popup-parceria" class="meu-popup">
+    <!-- Ícone do jogo parceiro -->
+    <a href="https://store.steampowered.com/app/424840/Little_Nightmares/">
+    <img src="../Web-Site-Ungrow/imagens/iconakira.png" alt="Ícone do Jogo" class="popup-foto">
+    </a>
+    
+    <!-- Textos e Legenda -->
+    <div class="popup-conteudo">
+        <h4>Conheça Também</h4>
+        <p>jogo parceiro: AKIRA</p>
+    </div>
+</div>
+
+<!-- SCRIPT DO POP-UP PQ POR ALGUM MOTIVO ELE NAO FUNCIONA NO ARQUIVO DELE -->
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('popup-parceria');
+    // Vamos usar o seu botão original como o "gatilho" para o pop-up aparecer
+    const gatilho = document.querySelector('.meu-botao-link');
+
+    if (!popup || !gatilho) return;
+
+    // Cria o observador que fica vigiando o botão
+    const observador = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            // Se o botão "SAIBA MAIS" aparecer na tela do usuário
+            if (entry.isIntersecting) {
+                popup.classList.add('mostrar-popup'); // Mostra o pop-up
+                observador.unobserve(gatilho); // Desliga o vigia para não rodar de novo
+            }
+        });
+    }, {
+        threshold: 0.1 // Ativa assim que pelo menos 10% do botão estiver visível
+    });
+
+    // Começa a vigiar o seu botão Saiba Mais
+    observador.observe(gatilho);
+});
+</script>
+
+
+
+
+
+
+
+
 
          </main>
         <!-- Contact/Area Container -->
@@ -165,7 +234,8 @@
         </div>
       </div>
 
-      
+ 
+ 
 
       <!-- End page content -->
     </div>
@@ -200,6 +270,15 @@
 
             </div>
 
+          
+
+            <div class="footer-social">
+        <!-- Lembre-se de ajustar o caminho da pasta correto aqui se for necessário -->
+        <a href="https://instagram.com" > Instagram</a>
+        <a href="https://tiktok.com" > TikTok</a>
+        <a href="https://twitter.com" >Twitter</a>
+    </div>
+
 
             <div class="powered-by">
                 © 2026 Ungrow. Todos os direitos reservados.
@@ -208,5 +287,6 @@
 
           
         </footer>
-  </body>
+        
+</body>
 </html>
