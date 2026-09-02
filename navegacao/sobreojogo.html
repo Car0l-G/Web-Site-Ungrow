@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link rel="stylesheet" href="styleSJ.css" />
     <title>Sobre o Jogo - Ungrow</title>
   </head>
@@ -12,7 +17,7 @@
     <main class="pagina-jogo">
     <!-- Mantém o fundo padrão do seu site -->
      <div class="topo-pagina-secundaria w3-black w3-center w3-padding-64">
-      <h1 class="titulo-secundario">SOBRE O JOGO</h1>
+      <h1 class="titulo-secundario" id="titulodapagina">SOBRE O JOGO</h1>
       <p class="subtitulo-secundario">
         
       </p>
@@ -152,7 +157,7 @@
                 <div class="imagem-fade">
 
                     <img
-                        src="../imagens/Hollow-Knight-Silksong.jpg"
+                        src="../imagens/backgroundalce.png"
                         alt="Imagem do mundo"
                     >
 
@@ -172,6 +177,35 @@
 
             </section>
 
+            <hr class="divisor">
+
+            <section class="bloco-texto">
+                <h2>
+                    A JORNADA DO PROTAGONISTA
+                </h2>
+                <p>
+                    O protagonista acorda assustado em um mundo aterrorizante, desprovido de cores e repleto de monstros, após adormecer no tronco de uma árvore velha e pútrida. 
+                    O evento inicial se desdobra quando ele se depara com um ser que o guia até uma flor especial; ao colhê-la, uma das cores é magicamente devolvida ao cenário, 
+                    revelando o objetivo principal do jogador, que consiste em encontrar as demais flores espalhadas pelo mapa, enfrentar inimigos corruptos e superar os obstáculos 
+                    do ambiente. Ao longo dessa jornada, a verdadeira motivação do personagem é descobrir uma maneira de escapar desse universo hostil, transformando sua busca pela 
+                    sobrevivência em um profundo processo de autoconhecimento e aceitação.
+                </p>
+                
+            </section>
+
+            <section class="bloco-texto">
+                <h2>
+                    DINÂMICA DE JOGO
+                </h2>
+                <p>
+                    Nosso jogo é uma plataforma 2D side-scrolling com movimentação rápida e fluida. Você poderá correr, pular, realizar um pulo duplo, atacar com sua arma e utilizar o dash para superar obstáculos e perigos.
+                    Ao longo da jornada, encontrará flores e outros itens espalhados pelo caminho. Mais do que simples colecionáveis, eles revelam fragmentos desse mundo e incentivam a exploração.
+                    A aventura evolui gradualmente: cada desafio apresenta novas mecânicas e inimigos mais fortes, enquanto os checkpoints permitem que você continue avançando sem medo de arriscar.
+
+                </p>
+                
+            </section>
+
 
             <hr class="divisor">
 
@@ -181,38 +215,30 @@
             <div class="imagem-grande">
 
                 <img
-                    src="../imagens/Hollow-Knight-Silksong.jpg"
+                    src="../imagens/banner.png"
                     alt="Imagem do jogo"
                 >
 
             </div>
 
-
-            <!-- TEXTO SOBRE A IMAGEM -->
-
-            <section class="bloco-texto">
-
-                <p>
-                    Sem saber como chegou ou o que levou até lá,
-                    você terá de atravessar esse mundo,
-                    enfrentar obstáculos e inimigos,
-                    derrotando criaturas e chefes cada vez mais perigosos.
-                </p>
-
+            <!-- SEÇÃO 6: Banner Retangular Largo -->
+            <section class="banner-largo-artes">
+            <div class="box-banner-horizontal"></div>
             </section>
 
 
             <!-- PEQUENOS ELEMENTOS -->
 
-            <div class="elementos-jogo">
-
-                <div class="elemento">cu</div>
-                <div class="elemento">cu</div>
-                <div class="elemento">cu</div>
-                <div class="elemento">cu</div>
-                <div class="elemento">cu</div>
-
-            </div>
+            <div class="triptico-container">
+                <!-- Quadro 1: Esquerda -->
+                <div class="quadro quadro-esquerda"></div>
+  
+                <!-- Quadro 2: Centro -->
+                <div class="quadro quadro-centro"></div>
+  
+                <!-- Quadro 3: Direita -->
+                <div class="quadro quadro-direita"></div>
+                </div>
 
 
             <hr class="divisor">
@@ -223,15 +249,13 @@
             <section class="esperanca">
 
                 <h2>
-                    MAS...<br>
-                    EXISTE UMA ESPERANÇA
+                    Sem saber como chegou ou o que levou até lá,
+                    você terá de atravessar esse mundo,
+                    enfrentar obstáculos e inimigos,
+                    derrotando criaturas e chefes cada vez mais perigosos.
                 </h2>
 
-                <p>
-                    Flores que ao serem tocadas trazem uma cor nova
-                    ao seu mundo, e uma esperança de finalmente
-                    voltar para casa.
-                </p>
+            
 
             </section>
 
@@ -244,6 +268,8 @@
         =========================== -->
 
         <footer>
+
+          <img src="../../Web-Site-Ungrow/imagens/asset6.png" alt="Logo" class="footer-logo-absoluto">
 
             <div class="footer-links">
 
@@ -263,22 +289,34 @@
                     CONCEPT ART
                 </a>
 
-                <a href="../index.html#contato">
+                <a href="index.html#contato">
                     CONTATO
                 </a>
 
             </div>
 
-            <div class="footer-social">
-        <!-- Lembre-se de ajustar o caminho da pasta correto aqui se for necessário -->
-        <a href="https://instagram.com" > Instagram</a>
-        <a href="https://tiktok.com" > TikTok</a>
-        <a href="https://twitter.com" >Twitter</a>
-    </div>
+          
+
+           <div class="footer-social">
+    <!-- Ícone do Instagram -->
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Ícone do TikTok -->
+    <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Ícone do Twitter / X -->
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+</div>
 
 
             <div class="powered-by">
-                POWERED BY
+                © 2026 Ungrow. Todos os direitos reservados.
             </div>
 
 

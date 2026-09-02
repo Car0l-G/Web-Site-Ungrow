@@ -82,8 +82,14 @@ html {
 p {
   font-size: 20px;
   font-family: "Inconsolata", sans-serif;
-  text-align: center;
+  text-align: justify;
 }
+
+#texto-chamada p {
+    text-align: center; /* Centraliza o texto dos parágrafos */
+}
+
+
 
 .bgimg {
   .bgimg {
@@ -349,6 +355,8 @@ p {
   max-width: 800px; /* Limita a largura máxima para não espalhar muito */
   padding: 0 20px; /* Evita que cole nas bordas em telas menores */
   box-sizing: border-box;
+
+   /* Garante que o container ocupe toda a largura disponível */
 }
 
 /* Bloco individual (Foto + Legenda) */
@@ -401,6 +409,29 @@ html {
   display: inline-block !important;
 }
 
+/*==========================
+  CERVO NA TELA
+=========================== */
+
+
+.imagem-contato-absoluta {
+  position: absolute;
+  left: -820px;         /* Aumentamos para empurrar a foto maior mais para a esquerda */
+  top: 55%;             
+  transform: translateY(-50%);
+  
+  width: 880px;         /* DEIXA O CERVO GRANDÃO: mude aqui se quiser ainda maior (ex: 500px, 550px) */
+  height: auto;
+
+  z-index: 200;
+}
+
+
+@media (max-width: 1100px) {
+  .imagem-contato-absoluta {
+    display: none;
+  }
+}
 
 
 
@@ -455,6 +486,20 @@ html {
 
 
 /* =========================================
+   LINHAS DIVISÓRIAS
+========================================= */
+
+.divisor {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 35px auto;
+}
+
+
+
+/* =========================================
    FOOTER
 ========================================= */
 
@@ -464,7 +509,22 @@ footer {
   padding: 40px 20px;
   text-align: center;
   margin-top: 70px;
+  position: relative;
 }
+
+.footer-logo-absoluto {
+  position: absolute;
+  left: 40px;          /* Distância da borda esquerda da tela */
+  top: 50%;            /* Alinha verticalmente ao centro */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical perfeito */
+  max-width: 120px;    /* Controle o tamanho da foto aqui */
+  height: auto;
+
+  max-width: 180px;    /* Aumente este valor (ex: 180px, 200px, 250px) */
+  height: auto;
+}
+
+
 
 .footer-links {
   display: flex;
@@ -506,10 +566,6 @@ footer {
   font-size: 16px;
 }
 
-.personagem-footer {
-  width: 100px;
-  margin-top: 15px;
-}
 
 /* =========================================
    MOBILE

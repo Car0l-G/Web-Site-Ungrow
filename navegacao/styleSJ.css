@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ungrow-Regular";
-  src: url(../Web-Site-Ungrow/fonts/Ungrow-Regular.otf);
+  src: url(../../Web-Site-Ungrow/fonts/Ungrow-Regular.otf);
   font-style: normal;
   font-display: swap;
 }
@@ -29,6 +29,7 @@ body {
 .barra-navegacao {
   display: flex;
   width: 100%;
+  font-family: "Ungrow-Regular";
 }
 
 .barra-navegacao .w3-col {
@@ -49,6 +50,7 @@ body {
 
 .pagina-jogo {
   min-height: 100vh;
+  
 
   background: linear-gradient(
     to bottom,
@@ -78,25 +80,45 @@ body {
    TEXTO PRINCIPAL
 ========================================= */
 
+#titulodapagina {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #dadada;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  font-family: "Ungrow-Regular";
+}
+
 .bloco-texto {
   text-align: center;
   margin-bottom: 50px;
+  font-family: "inconsolata", monospace;
 }
 
 .bloco-texto h2 {
-  font-size: 22px;
-  line-height: 1.3;
-  font-weight: normal;
-  letter-spacing: 1px;
-  margin-bottom: 35px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #dadada;
+  margin-bottom: 90px;
+  margin-top: 90px;
+  
 }
 
 .bloco-texto p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: white;
-  margin: 25px 0;
+  max-width: 800px;       /* Controla a largura máxima para o texto não ficar gigante */
+  margin: 40px auto;      /* O 'auto' centraliza o bloco de texto inteiro na tela */
+  font-family: "inconsolata", monospace;
+  color: #cecdcd;
+  line-height: 1.6;       /* Deixa um espaçamento confortável entre as linhas */
+  text-align: justify;    /* Mantém as bordas laterais alinhadas, se preferir */
+  font-size: 20px;
 }
+
+
 
 /* =========================================
    LINHAS DIVISÓRIAS
@@ -119,6 +141,7 @@ body {
   align-items: center;
   gap: 30px;
   margin: 35px 0;
+  font-family: "inconsolata", monospace;
 }
 
 /* =========================================
@@ -133,31 +156,60 @@ body {
   overflow: hidden;
 }
 
-.imagem-fade img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+
 
 /* =========================================
    FADE DA IMAGEM
 ========================================= */
 
-.imagem-fade::after {
-  content: "";
-  position: absolute;
-  inset: 0;
+.imagem-fade img {
+  display: block;
+  width: 100%;
+  height: auto;
 
-  background: linear-gradient(
+  /* FADE DA IMAGEM PARA O FUNDO */
+  -webkit-mask-image: linear-gradient(
     to right,
-    transparent 45%,
-    rgba(0, 0, 0, 0.15) 60%,
-    rgba(0, 0, 0, 0.65) 85%,
-    rgba(0, 0, 0, 0.95) 100%
+    black 0%,
+    black 45%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.4) 75%,
+    transparent 100%
   );
 
-  pointer-events: none;
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 45%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.4) 75%,
+    transparent 100%
+  );
 }
+
+/*fade da segunda imagem*/
+.bloco-historia .imagem-fade:last-child img {
+
+  -webkit-mask-image: linear-gradient(
+    to left,
+    black 10%,
+    black 45%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.4) 75%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to left,
+    black 0%,
+    black 45%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.4) 75%,
+    transparent 100%
+  );
+
+}
+
 
 /* =========================================
    TEXTO AO LADO DA IMAGEM
@@ -169,14 +221,14 @@ body {
 }
 
 .texto-lateral h2 {
-  font-size: 21px;
+  font-size: 25px;
   line-height: 1.15;
   font-weight: normal;
   margin: 0 0 15px;
 }
 
 .texto-lateral p {
-  font-size: 13px;
+  font-size: 20px;
   line-height: 1.4;
   color: white;
 }
@@ -245,14 +297,73 @@ body {
   height: 65px;
 }
 
+
+/* =========================================
+   SEÇÃO 7: QUADRO QUE SE COMPLETA  
+========================================= */
+.banner-largo-artes {
+  margin: 40px 0 60px;
+}
+
+.box-banner-horizontal {
+  width: 100%;
+  height: 120px;
+  background-color: #cccccc;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505;
+  border-radius: 6px;
+}
+
+
+/* =========================================
+   SEÇÃO 7: QUADRO QUE SE COMPLETA
+========================================= */
+
+.triptico-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;             /* Distância (fresta) entre os quadros */
+  max-width: 1200px;     /* Largura máxima do conjunto na tela */
+  margin: 50px auto;     /* Centraliza o bloco na página */
+}
+
+.quadro {
+  flex: 1;               /* Faz os 3 quadros terem exatamente o mesmo tamanho */
+  height: 500px;         /* Altura dos quadros (ajuste como quiser) */
+  background-image: url('../imagens/Hollow-Knight-Silksong.jpg'); /* COLOQUE SUA FOTO AQUI */
+  background-size: 300% 100%; /* Força a imagem a esticar horizontalmente para cobrir o equivalente a 3 quadros */
+  background-repeat: no-repeat;
+  border: 4px solid #1a1a1a;  /* Moldura fina escura ao redor de cada quadro */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Sombra para dar efeito de quadro real */
+}
+
+/* Move a imagem de fundo para mostrar apenas a parte esquerda */
+.quadro-esquerda {
+  background-position: left center;
+}
+
+/* Move a imagem de fundo para mostrar apenas o meio */
+.quadro-centro {
+  background-position: center center;
+}
+
+/* Move a imagem de fundo para mostrar apenas a parte direita */
+.quadro-direita {
+  background-position: right center;
+}
+
 /* =========================================
    BLOCO "EXISTE UMA ESPERANÇA"
 ========================================= */
 
 .esperanca {
   text-align: center;
-  margin: 35px auto 60px;
-  max-width: 700px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #dadada;
+  margin-bottom: 90px;
+  margin-top: 90px;
 }
 
 .esperanca h2 {
@@ -278,7 +389,22 @@ footer {
   padding: 40px 20px;
   text-align: center;
   margin-top: 70px;
+  position: relative;
 }
+
+.footer-logo-absoluto {
+  position: absolute;
+  left: 40px;          /* Distância da borda esquerda da tela */
+  top: 50%;            /* Alinha verticalmente ao centro */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical perfeito */
+  max-width: 120px;    /* Controle o tamanho da foto aqui */
+  height: auto;
+
+  max-width: 180px;    /* Aumente este valor (ex: 180px, 200px, 250px) */
+  height: auto;
+}
+
+
 
 .footer-links {
   display: flex;
@@ -320,10 +446,6 @@ footer {
   font-size: 16px;
 }
 
-.personagem-footer {
-  width: 100px;
-  margin-top: 15px;
-}
 
 /* =========================================
    CELULAR

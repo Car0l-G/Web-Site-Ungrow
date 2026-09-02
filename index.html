@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <link
       rel="stylesheet"
@@ -85,10 +87,17 @@
 
       <!-- Seção do Prólogo -->
       <div class="w3-container espaco-separador" id="about">
-        <div class="w3-content" style="max-width:700px">
+        <div class="w3-content" style="max-width:1000px">
           <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">PRÓLOGO</span></h5>
           <p>Em um mundo onde as cores já se perderam, o fracasso já tomou conta, e o desespero é seu unico parceiro, a esperança se tornou seu ponto seguro</p>
           <p>Mas a esperança uma hora morre, e as cores uma hora somem. Insista, recupere a esperança, traga cores ao mundo dominado pela solidão e tenha esperança </p>
+
+          <hr class="divisor">
+
+          <p>Você assume o papel de um personagem que desperta em um lugar completamente diferente daquele que conhecia. Um mundo sem cores, sombrio e estranhamente perturbador.
+            Sem entender por que está ali ou o que aquele lugar realmente é, você decide seguir em frente em busca de respostas.
+            Durante sua jornada, encontrará pequenos guardiões — ou talvez inimigos — que tentarão impedir seu avanço. E, conforme se aprofunda nesse universo misterioso, enfrentará desafios ainda maiores: chefes que colocarão suas habilidades à prova e o prepararão para descobrir a verdade.
+          </p>
         </div>
       
       </div>
@@ -107,7 +116,7 @@
     </section>
 
     <div class="w3-container espaco-separador" id="about">
-        <div class="w3-content" style="max-width:700px">
+        <div class="w3-content" id="texto-chamada" style="max-width:1000px">
           <p>Um novo mundo espera por você. Explore cenários desconhecidos, descubra seus segredos, enfrente criaturas e desafie chefões em batalhas inesquecíveis. Com uma jogabilidade leve e envolvente, cada descoberta pode ser o começo de uma nova aventura. A cada passo, novos desafios surgem e novas histórias estão esperando para serem descobertas.</p>
           <p>Explore. Descubra. Enfrente. Sobreviva.</p>
         </div>
@@ -176,14 +185,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
          </main>
         <!-- Contact/Area Container -->
-        <div class="w3-container" id="where" style="padding-bottom: 32px">
-          <div class="w3-content" style="max-width: 700px">
+        <div class="w3-container" id="where" style="padding-bottom: 32px; position: relative;">
+        <div class="w3-content" style="max-width: 700px; position: relative;">
+
+          <img src="../Web-Site-Ungrow/imagens/cervopromocional.png" alt="Ilustração" class="imagem-contato-absoluta">
+
             <h5 class="w3-center w3-padding-48">
               <span class="w3-tag w3-wide">CONTATE-NOS</span>
             </h5>
 
+            
+
+             <style>
+              .meu-formulario-customizado input::placeholder,
+              .meu-formulario-customizado textarea::placeholder {
+              font-family: "Ungrow-Regular", "Inconsolata", sans-serif;
+              }
+              </style>
+
             <p>
-              <span class="w3-tag">FYI!</span> Envie sua mensagem, dúvida ou
+              <span class="w3-tag">EI!</span> Envie sua mensagem, dúvida ou
               feedback diretamente para a nossa equipe preenchendo os campos
               abaixo.
             </p>
@@ -246,6 +267,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <footer>
 
+          <img src="../Web-Site-Ungrow/imagens/asset6.png" alt="Logo" class="footer-logo-absoluto">
+
             <div class="footer-links">
 
                 <a href="../index.html#home">
@@ -272,12 +295,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
           
 
-            <div class="footer-social">
-        <!-- Lembre-se de ajustar o caminho da pasta correto aqui se for necessário -->
-        <a href="https://instagram.com" > Instagram</a>
-        <a href="https://tiktok.com" > TikTok</a>
-        <a href="https://twitter.com" >Twitter</a>
-    </div>
+           <div class="footer-social">
+    <!-- Ícone do Instagram -->
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Ícone do TikTok -->
+    <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Ícone do Twitter / X -->
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+</div>
 
 
             <div class="powered-by">

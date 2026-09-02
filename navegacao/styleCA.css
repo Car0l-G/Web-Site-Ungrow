@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ungrow-Regular";
-  src: url(../Web-Site-Ungrow/fonts/Ungrow-Regular.otf);
+  src: url(../../Web-Site-Ungrow/fonts/Ungrow-Regular.otf);
   font-style: normal;
   font-display: swap;
 }
@@ -112,16 +112,17 @@ p{
    TEXTOS CENTRALIZADOS E DIVISORES
 ========================================= */
 .texto-central {
-  text-align: center;
-  max-width: 650px;
-  margin: 30px auto;
+  max-width: 800px;       /* Controla a largura máxima para o texto não ficar gigante */
+  margin: 40px auto;      /* O 'auto' centraliza o bloco de texto inteiro na tela */
+  font-family: "inconsolata", monospace;
   color: #c4c4c4;
-  line-height: 1.6;
+  line-height: 1.6;       /* Deixa um espaçamento confortável entre as linhas */
+  text-align: justify;    /* Mantém as bordas laterais alinhadas, se preferir */
 }
 
 .divisor-artes {
-  width: 40%;
-  height: 4px;
+  width: 85%;
+  height: 2px;
   background-color: #050505;
   margin: 30px auto 0;
   border-radius: 2px;
@@ -173,20 +174,40 @@ p{
    SEÇÃO 5: IMAGEM LATERAL COM TEXTO CORRIDO
 ========================================= */
 .bloco-lateral-artes {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  margin: 40px 0;
+
+  max-width: 800px;       /* Controla a largura máxima para o texto não ficar gigante */
+  margin: 40px auto;      /* O 'auto' centraliza o bloco de texto inteiro na tela */
+  font-family: "inconsolata", monospace;
+  color: #000000;
+  line-height: 1.6;       /* Deixa um espaçamento confortável entre as linhas */
+  text-align: justify;    /* Mantém as bordas laterais alinhadas, se preferir */
+
 }
 
-.box-imagem-lateral {
-  width: 180px;
-  height: 180px;
-  background-color: #cccccc;
-  border: 3px solid #050505;
-  box-shadow: 4px 4px 0px #050505;
-  border-radius: 6px;
-  flex-shrink: 0;
+.quadrados-container {
+    display: flex;            /* Alinha os itens um ao lado do outro */
+    justify-content: center;  /* Centraliza o grupo de quadrados na tela */
+    gap: 20px;                /* Define o espaço de separação entre cada um */
+    margin-top: 30px;         /* Distância do texto de cima */
+}
+
+/* Estilização padrão para o formato dos seus quadradinhos */
+.quadradinho {
+    width: 150px;              /* Largura do quadrado */
+    height: 150px;             /* Altura igual para ficar simétrico */
+    background-color: #ccc;   /* Cor de fundo cinza igual à imagem */
+    border-radius: 8px;       /* Bordas levemente arredondadas */
+    aspect-ratio: 1 / 1;
+    border: 3px solid #050505;  /* Borda preta para destacar */
+    box-shadow: 4px 4px 0px #050505;
+    overflow: hidden; 
+}
+
+.quadradinho img {
+    width: 100%;          /* Ocupa toda a largura interna do quadrado */
+    height: 100%;         /* Ocupa toda a altura interna do quadrado */
+    object-fit: cover;    /* ESSENCIAL: Encaixa a foto perfeitamente sem distorcer ou esticar */
+    object-position: center; /* Mantém o centro da imagem visível */
 }
 
 .texto-lateral-artes {
@@ -306,7 +327,22 @@ footer {
   padding: 40px 20px;
   text-align: center;
   margin-top: 70px;
+  position: relative;
 }
+
+.footer-logo-absoluto {
+  position: absolute;
+  left: 40px;          /* Distância da borda esquerda da tela */
+  top: 50%;            /* Alinha verticalmente ao centro */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical perfeito */
+  max-width: 120px;    /* Controle o tamanho da foto aqui */
+  height: auto;
+
+  max-width: 180px;    /* Aumente este valor (ex: 180px, 200px, 250px) */
+  height: auto;
+}
+
+
 
 .footer-links {
   display: flex;
@@ -348,7 +384,3 @@ footer {
   font-size: 16px;
 }
 
-.personagem-footer {
-  width: 100px;
-  margin-top: 15px;
-}
