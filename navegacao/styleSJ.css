@@ -318,7 +318,7 @@ body {
 .quadro {
   flex: 1;               /* Faz os 3 quadros terem exatamente o mesmo tamanho */
   height: 500px;         /* Altura dos quadros (ajuste como quiser) */
-  background-image: url('../imagens/Hollow-Knight-Silksong.jpg'); /* COLOQUE SUA FOTO AQUI */
+  background-image: url('../../Web-Site-Ungrow/imagens/rascunhos/jardim.webp'); /* COLOQUE SUA FOTO AQUI */
   background-size: 300% 100%; /* Força a imagem a esticar horizontalmente para cobrir o equivalente a 3 quadros */
   background-repeat: no-repeat;
   border: 4px solid #1a1a1a;  /* Moldura fina escura ao redor de cada quadro */
