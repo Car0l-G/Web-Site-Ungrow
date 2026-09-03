@@ -89,6 +89,32 @@ p {
     text-align: center; /* Centraliza o texto dos parágrafos */
 }
 
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajuste para a altura real do seu banner se necessário */
+  overflow: hidden;
+}
+
+/* =========================================
+   config da logo
+========================================= */
+
+/* Posiciona a logo exatamente no centro da área preta */
+.logo-centro {
+  position: absolute;
+  top: 55%;           /* Ajusta a altura vertical (mude para subir ou descer) */
+  left: 50%;          /* Move para o centro horizontal da tela */
+  transform: translate(-50%, -50%); /* Garante a centralização perfeita do próprio elemento */
+  
+  width: 100%;
+  max-width: 700px;   /* Ajuste esse valor para o tamanho ideal da sua logo */
+  height: auto;
+  z-index: 10;        /* Garante que ela fique acima do fundo do cenário */
+}
+
+
+/*---------------*/
 
 
 .bgimg {
@@ -338,6 +364,7 @@ p {
 /* Efeito ao passar o mouse por cima do link */
 .barra-navegacao a:hover {
   background-color: #222; /* Tom cinza escuro sutil ao passar o mouse */
+  font-size: 18px;
 }
 
 .w3-top {
@@ -423,6 +450,7 @@ html {
   width: 880px;         /* DEIXA O CERVO GRANDÃO: mude aqui se quiser ainda maior (ex: 500px, 550px) */
   height: auto;
 
+  pointer-events: none;
   z-index: 200;
 }
 

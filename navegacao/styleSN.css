@@ -33,6 +33,7 @@ body, html {
 
 .barra-navegacao a {
   transition: 0.3s;
+  font-size: 18px;
 }
 
 .barra-navegacao a:hover {
@@ -109,10 +110,12 @@ body, html {
 
 .info-integrante p {
   margin: 0;
-  font-size: 16.5px;
+  font-size: 20px;
   line-height: 1.6;
   color: #333;
 }
+
+
 
 /* =========================================
    BANNER DESTAQUE (RETÂNGULO GRANDE)
@@ -122,6 +125,16 @@ body, html {
   margin: 40px 0;
 }
 
+/* Garante o comportamento correto do link que envelopa a imagem */
+.link-banner-efeito {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden; /* Corta o excesso da imagem quando ela crescer no hover */
+}
+
+/* Configuração padrão da imagem do banner */
 .banner-destaque-sobrenos img {
   width: 100%;
   height: auto;
@@ -131,6 +144,16 @@ body, html {
   box-shadow: 4px 4px 0px #050505; /* Mesma sombra blocada dos cards */
   border-radius: 6px;
   display: block;
+  
+  /* Adiciona a transição suave para a animação */
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🌟 EFEITO AO PASSAR O MOUSE (HOVER) */
+.link-banner-efeito:hover img {
+  transform: scale(1.02); /* Aumenta o tamanho do banner levemente (2%) */
+  filter: brightness(0.60); /* Dá um leve ganho de iluminação na arte */
+  box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2); /* Cria uma iluminação suave na sombra */
 }
 
 /* RESPONSIVO: Ajuste automático para telas de celular */
@@ -140,6 +163,8 @@ body, html {
     text-align: center;
   }
 }
+
+
 
 /* =========================================
    FOOTER

@@ -38,6 +38,7 @@ body {
 
 .barra-navegacao a {
   transition: 0.3s;
+  font-size: 18px;
 }
 
 .barra-navegacao a:hover {
@@ -115,7 +116,7 @@ body {
   color: #cecdcd;
   line-height: 1.6;       /* Deixa um espaçamento confortável entre as linhas */
   text-align: justify;    /* Mantém as bordas laterais alinhadas, se preferir */
-  font-size: 20px;
+  font-size: 25px;
 }
 
 
@@ -230,7 +231,7 @@ body {
 }
 
 .texto-lateral p {
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.4;
   color: white;
 }

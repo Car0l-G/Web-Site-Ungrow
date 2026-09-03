@@ -21,7 +21,7 @@ body, html {
 
 
 p{
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.6;
 }
 
@@ -41,7 +41,7 @@ p{
   padding: 14px 0;
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 1px;
   transition: 0.3s;
 }
@@ -74,12 +74,16 @@ p{
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
+
+  max-width: 800px;  /* Limita as imagens na mesma largura do texto */
+  margin: 0 auto;    /* Centraliza o bloco das imagens na tela */
 }
 
 
+
 .grid-tres-imagens .box-imagem {
-  flex: 1;
-  height: 140px;
+  flex: 1 1 0;
+  height: 180px;
   background-color: #cccccc;
   border: 3px solid #050505;
   box-shadow: 4px 4px 0px #050505;
@@ -121,11 +125,58 @@ p{
 }
 
 .divisor-artes {
-  width: 85%;
+  width: 95%;
   height: 2px;
   background-color: #050505;
   margin: 30px auto 0;
   border-radius: 2px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+
+
+/* =========================================================
+   SEÇÃO 2 - IMAGENS FLUTUANTES LATERAIS DA SEÇÃO DE INIMIGOS
+============================================================ */
+
+/* Configurações aplicadas nas duas imagens ao mesmo tempo */
+.container-âncora-inimigos {
+  position: relative;
+  max-width: 950px; /* Alinha com a largura máxima padrão que você usa nos seus layouts */
+  margin: 0 auto;   /* Centraliza o bloco na tela */
+}
+
+/* Configurações básicas para as duas imagens flutuantes */
+.arte-decorativa-esquerda,
+.arte-decorativa-direita {
+  position: absolute;
+  top: 20%;                     /* Centraliza verticalmente na altura do bloco dos inimigos */
+  transform: translateY(-50%);
+  width: 450px;                 /* Tamanho grande conforme o cervo original */
+  height: auto;
+  pointer-events: none;         /* Cliques passam direto por ela */
+  z-index: 100;
+}
+
+/* Joga a imagem para fora do bloco, totalmente para a ESQUERDA */
+.arte-decorativa-esquerda {
+  right: 100%;                  /* Empurra para trás do início do texto */
+  margin-right: 40px;           /* Distância de segurança do texto */
+  margin-right: 120px;          /* Ajuste fino para deixar a imagem mais pra esquerda */
+}
+
+/* Joga a imagem para fora do bloco, totalmente para a DIREITA */
+.arte-decorativa-direita {
+  left: 100%;                   /* Empurra para a frente do fim do texto */
+  margin-left: 120px;            /* Distância de segurança do texto */
+}
+
+/* Esconde as artes em telas menores para não quebrar o design */
+@media (max-width: 1500px) {
+  .arte-decorativa-esquerda,
+  .arte-decorativa-direita {
+    display: none;
+  }
 }
 
 /* =========================================
@@ -215,22 +266,108 @@ p{
   line-height: 1.6;
 }
 
+
 /* =========================================
-   SEÇÃO 6: BANNER HORIZONTAL GRANDE
+   IMAGEM A ESQUERDA E TEXTO A DIREITA - LOUVA-DEUS
 ========================================= */
-.banner-largo-artes {
-  margin: 40px 0 60px;
-  
+
+.card-horizontal {
+  display: flex;
+  align-items: center; /* Alinha o texto verticalmente pelo centro da imagem */
+  gap: 30px;           /* Espaçamento entre a imagem e o bloco de texto */
+  padding: 20px;
+  border-radius: 6px;  /* Suaviza os cantos do container */
+  max-width: 800px;    /* Define uma largura máxima para o bloco */
+  margin: 20px auto;   /* Centraliza o bloco inteiro na tela */
 }
 
-.box-banner-horizontal {
-  width: 100%;
-  height: 120px;
-  background-color: #cccccc;
-  border: 3px solid #050505;
-  box-shadow: 4px 4px 0px #050505;
-  border-radius: 6px;
+/* Controla a caixa da imagem */
+.card-imagem {
+  flex-shrink: 0;      /* Impede que a imagem seja esmagada pelo texto */
 }
+
+.card-imagem img {
+  width: 260px;        /* Defina a largura fixa para a imagem quadrada */
+  height: 220px;       /* Defina a altura fixa */
+  object-fit: cover;   /* Faz a imagem preencher o quadrado sem distorcer */
+  border-radius: 4px;  /* Suaviza as bordas da imagem */
+}
+
+/* Controla a caixa de texto */
+.card-texto {
+  flex: 1;             /* Faz o texto ocupar todo o restante do espaço disponível */
+  color: #050505;      /* Cor do texto branca para contrastar com o fundo */
+}
+
+
+.card-texto p {
+  margin: 0;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 23px;
+  line-height: 1.5;    /* Melhora o espaçamento entre as linhas do texto */
+  text-align: justify;
+}
+
+/* RESPONSIVO: Faz o texto ir para baixo da imagem em telas de celular */
+@media (max-width: 600px) {
+  .card-horizontal {
+    flex-direction: column; 
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+
+/* =========================================
+   BANNER DESTAQUE (RETÂNGULO GRANDE)
+========================================= */
+/* =========================================
+   BANNER DESTAQUE (RETÂNGULO GRANDE)
+========================================= */
+.banner-destaque-sobrenos {
+  width: 100%;
+  margin: 40px 0;
+}
+
+/* Garante o comportamento correto do link que envelopa a imagem */
+.link-banner-efeito {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden; /* Corta o excesso da imagem quando ela crescer no hover */
+}
+
+/* Configuração padrão da imagem do banner */
+.banner-destaque-sobrenos img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 5; /* Formato retangular bem horizontal conforme o desenho */
+  object-fit: cover;
+  border: 3px solid #050505;
+  box-shadow: 4px 4px 0px #050505; /* Mesma sombra blocada dos cards */
+  border-radius: 6px;
+  display: block;
+  
+  /* Adiciona a transição suave para a animação */
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🌟 EFEITO AO PASSAR O MOUSE (HOVER) */
+.link-banner-efeito:hover img {
+  transform: scale(1.02); /* Aumenta o tamanho do banner levemente (2%) */
+  filter: brightness(0.60); /* Dá um leve ganho de iluminação na arte */
+  box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2); /* Cria uma iluminação suave na sombra */
+}
+
+/* RESPONSIVO: Ajuste automático para telas de celular */
+@media (max-width: 600px) {
+  .card-integrante {
+    flex-direction: column; /* Empilha a foto em cima do texto no mobile */
+    text-align: center;
+  }
+}
+
 
 /* =========================================
    RODAPÉ PADRÃO
