@@ -275,6 +275,38 @@ p {
   display: block !important;
 }
 
+
+
+/*PARA FAZER O EFEITO DO MOUSE PASSAR POR CIMA*/
+.link-banner-efeito { 
+    display: block; 
+    text-decoration: none; 
+    cursor: pointer; 
+    border-radius: 6px; 
+    overflow: hidden; /* Corta o excesso da imagem quando ela crescer */
+    transition: box-shadow 0.3s ease; /* Suaviza a sombra */
+}
+
+/* Garante que a imagem ocupe o espaço correto e tenha transição suave */
+.link-banner-efeito img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito quando passa o mouse por cima do link */
+.link-banner-efeito:hover img { 
+    transform: scale(1.02); /* Aumenta o tamanho da imagem em 2% */
+    filter: brightness(0.60); /* Escurece a imagem (0.60 diminui a luz, use valores maiores que 1 para clarear) */
+}
+
+.link-banner-efeito:hover {
+    box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2); /* Sombra aplicada no container */
+}
+
+
+
 /* Garante que o container de contatos também não force um fundo branco antes da hora */
 #where {
   background: transparent !important;
