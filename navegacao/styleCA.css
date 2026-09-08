@@ -14,7 +14,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
   background-color: #fafafa; /* Mantém o fundo claro padrão das suas páginas secundárias */
   font-family: "Ungrow-Regular";
 }
@@ -23,6 +23,7 @@ body, html {
 p{
   font-size: 25px;
   line-height: 1.6;
+  font-family: "Poiret One", sans-serif;
 }
 
 .topo-pagina-secundaria {
@@ -118,7 +119,7 @@ p{
 .texto-central {
   max-width: 800px;       /* Controla a largura máxima para o texto não ficar gigante */
   margin: 40px auto;      /* O 'auto' centraliza o bloco de texto inteiro na tela */
-  font-family: "inconsolata", monospace;
+  font-family: "Poiret One", sans-serif;
   color: #c4c4c4;
   line-height: 1.6;       /* Deixa um espaçamento confortável entre as linhas */
   text-align: justify;    /* Mantém as bordas laterais alinhadas, se preferir */
@@ -264,6 +265,7 @@ p{
 .texto-lateral-artes {
   flex: 1;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 
@@ -302,10 +304,11 @@ p{
 
 .card-texto p {
   margin: 0;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 23px;
   line-height: 1.5;    /* Melhora o espaçamento entre as linhas do texto */
   text-align: justify;
+  font-weight: 600;
 }
 
 /* RESPONSIVO: Faz o texto ir para baixo da imagem em telas de celular */

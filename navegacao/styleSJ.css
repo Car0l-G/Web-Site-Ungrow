@@ -14,7 +14,7 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
   color: white;
   background: #000;
   font-family: "Ungrow-Regular";
@@ -95,7 +95,7 @@ body {
 .bloco-texto {
   text-align: center;
   margin-bottom: 50px;
-  font-family: "inconsolata", monospace;
+  font-family: "Poiret One", sans-serif;
 }
 
 .bloco-texto h2 {
@@ -112,7 +112,7 @@ body {
 .bloco-texto p {
   max-width: 800px;       /* Controla a largura máxima para o texto não ficar gigante */
   margin: 40px auto;      /* O 'auto' centraliza o bloco de texto inteiro na tela */
-  font-family: "inconsolata", monospace;
+  font-family: "Poiret One", sans-serif;
   color: #cecdcd;
   line-height: 1.6;       /* Deixa um espaçamento confortável entre as linhas */
   text-align: justify;    /* Mantém as bordas laterais alinhadas, se preferir */
@@ -144,7 +144,7 @@ body {
   align-items: center;
   gap: 30px;
   margin: 35px 0;
-  font-family: "inconsolata", monospace;
+  font-family: "Poiret One", sans-serif;
 }
 
 /* =========================================

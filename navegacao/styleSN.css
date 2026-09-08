@@ -9,7 +9,7 @@
 /* Configurações Globais da Página */
 body, html {
   height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
   background-color: #ffffff;
   font-family: "Ungrow-Regular";
   
@@ -49,7 +49,7 @@ body, html {
 }
 
 .subtitulo-secundario {
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
   letter-spacing: 1px;
   color: #aaaaaa;
 }
@@ -66,7 +66,7 @@ body, html {
   max-width: 950px;
   margin: 50px auto 0;
   min-height: calc(100vh - 350px);
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
 }
 
 /* Container para empilhar verticalmente os cards dos integrantes */

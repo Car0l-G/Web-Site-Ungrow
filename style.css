@@ -75,18 +75,31 @@
 body,
 html {
   height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
   font-family: "Ungrow-Regular";
 }
 
+
+
 p {
   font-size: 25px;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Poiret One", sans-serif;
   text-align: justify;
+  /*font-weight: 570;*/
+  color: #c7c6c6;
+}
+
+#p-contato {
+  color: #070707;
 }
 
 #texto-chamada p {
     text-align: center; /* Centraliza o texto dos parágrafos */
+    color: #181818; /* Mantém a cor cinza */
+    font-weight: 600; /* Mantém a espessura da fonte */
 }
 
 #home {
