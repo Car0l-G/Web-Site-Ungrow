@@ -318,7 +318,8 @@
 
 
             <div class="powered-by">
-                © 2026 Ungrow. Todos os direitos reservados.
+                © 2026 Ungrow. Todos os direitos reservados.<br>
+                © PixaBay. Autoria musical.
             </div>
 
 
@@ -327,6 +328,61 @@
 
 
     </main>
+
+
+    <!--MUSICA DO SITE-->
+    <audio id="musicaFundo" loop onplay="this.volume=0.1"> 
+        <source src="../audios/leberch-piano-513745.mp3" type="audio/mpeg"> 
+        </audio> 
+
+        <button id="botaoMusica" class="botao-musica">🔊</button> 
+        
+        
+        
+        <script>
+          const musica = document.getElementById("musicaFundo");
+    const botao = document.getElementById("botaoMusica");
+
+    // 1. Define o volume
+
+    // 2. RECUPERA O ESTADO ANTERIOR (Tempo e se estava pausada)
+    const tempoSalvo = localStorage.getItem("musicaTempo");
+    const estavaPausada = localStorage.getItem("musicaPausada");
+
+    if (tempoSalvo) {
+        musica.currentTime = parseFloat(tempoSalvo);
+    }
+
+    // Se o usuário tinha pausado na página anterior, mantém pausado nesta
+    if (estavaPausada === "true") {
+        musica.pause();
+        botao.textContent = "🔇";
+    } else {
+        // Se não estava pausada, tenta dar play (tratando bloqueio do navegador)
+        musica.play().catch(() => {
+            // Se o navegador bloquear o autoplay na mudança de página, o botão avisa
+            botao.textContent = "🔇"; 
+        });
+    }
+
+    // 3. SALVA O TEMPO CONSTANTEMENTE ENQUANTO A MÚSICA TOCA
+    musica.addEventListener("timeupdate", function () {
+        localStorage.setItem("musicaTempo", musica.currentTime);
+    });
+
+    // 4. CONTROLE DO BOTÃO (E salva se o usuário pausou voluntariamente)
+    botao.addEventListener("click", function () {
+        if (musica.paused) {
+            musica.play();
+            botao.textContent = "🔊";
+            localStorage.setItem("musicaPausada", "false");
+        } else {
+            musica.pause();
+            botao.textContent = "🔇";
+            localStorage.setItem("musicaPausada", "true");
+        }
+    });
+        </script>
 
 </body>
 </html>

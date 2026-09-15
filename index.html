@@ -76,7 +76,7 @@
         <span class="icone-btn"> <img src="../Web-Site-Ungrow/imagens/steamlogo.png" alt="Steam" class="logo-steam-btn" /> WISHLIST NA STEAM
       </a>
       
-      <a href="#TRAILER" class="btn-trailer-vazado">
+      <a href="https://youtu.be/3s5b1QbeO_8" target="_blank" class="btn-trailer-vazado">
         <span class="icone-btn">▶</span> ASSISTIR TRAILER
       </a>
     </div>
@@ -112,7 +112,7 @@
       </a>
 
       <figure class="bloco-midia-item">
-        <a href="https://store.steampowered.com/app/424840/Little_Nightmares/" target="_blank" rel="noopener noreferrer" class="link-banner-efeito">
+        <a href="https://youtu.be/3s5b1QbeO_8" target="_blank" rel="noopener noreferrer" class="link-banner-efeito">
         <img src="imagens/steam.jpeg" alt="Assista ao Trailer" >
         <figcaption>TRAILER</figcaption>
         </a>
@@ -183,10 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
          </main>
         <!-- Contact/Area Container -->
         <div class="w3-container" id="where" style="padding-bottom: 32px; position: relative;">
@@ -213,13 +209,16 @@ document.addEventListener('DOMContentLoaded', function() {
               abaixo.
             </p>
 
-            <main
-              action="/action_page.php"
-              method="POST"
-              target="_blank"
-              class="meu-formulario-customizado"
-              id="contato"
-            >
+             <form
+                action="https://formsubmit.co/RM571849@fiap.com.br"
+                method="POST"
+                class="meu-formulario-customizado"
+                id="contato"
+                >
+      
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Nova mensagem - Site Ungrow">
+
               <p>
                 <input
                   class="w3-input w3-padding-16 w3-border"
@@ -253,13 +252,23 @@ document.addEventListener('DOMContentLoaded', function() {
                   ENVIAR
                 </button>
               </p>
+            </form> <!-- Fechamento correto da tag form -->
+
+            <script>
+            const formulario = document.getElementById("contato");
+            const botaoEnviar = formulario.querySelector("button[type='submit']");
+
+            formulario.addEventListener("submit", function () {
+                botaoEnviar.disabled = true;
+                botaoEnviar.textContent = "ENVIADO";
+            });
+            </script>
             
-            </form>
           </div>
         </div>
-      </div>
+        </div>
 
- 
+    
  
 
       <!-- End page content -->
@@ -319,12 +328,70 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             <div class="powered-by">
-                © 2026 Ungrow. Todos os direitos reservados.
+                © 2026 Ungrow. Todos os direitos reservados.<br>
+                © PixaBay. Autoria musical.
             </div>
 
 
           
         </footer>
+
+
+
+
+        <audio id="musicaFundo" loop onplay="this.volume=0.1"> 
+        <source src="../Web-Site-Ungrow/audios/leberch-piano-513745.mp3" type="audio/mpeg"> 
+        </audio> 
+
+        <button id="botaoMusica" class="botao-musica">🔊</button> 
+        
+        
+
+        <script>
+          const musica = document.getElementById("musicaFundo");
+    const botao = document.getElementById("botaoMusica");
+
+
+    // 2. RECUPERA O ESTADO ANTERIOR (Tempo e se estava pausada)
+    const tempoSalvo = localStorage.getItem("musicaTempo");
+    const estavaPausada = localStorage.getItem("musicaPausada");
+
+    if (tempoSalvo) {
+        musica.currentTime = parseFloat(tempoSalvo);
+    }
+
+    // Se o usuário tinha pausado na página anterior, mantém pausado nesta
+    if (estavaPausada === "true") {
+        musica.pause();
+        botao.textContent = "🔇";
+    } else {
+        // Se não estava pausada, tenta dar play (tratando bloqueio do navegador)
+        musica.play().catch(() => {
+            // Se o navegador bloquear o autoplay na mudança de página, o botão avisa
+            botao.textContent = "🔇"; 
+        });
+    }
+
+    // 3. SALVA O TEMPO CONSTANTEMENTE ENQUANTO A MÚSICA TOCA
+    musica.addEventListener("timeupdate", function () {
+        localStorage.setItem("musicaTempo", musica.currentTime);
+    });
+
+    // 4. CONTROLE DO BOTÃO (E salva se o usuário pausou voluntariamente)
+    botao.addEventListener("click", function () {
+        if (musica.paused) {
+            musica.play();
+            botao.textContent = "🔊";
+            localStorage.setItem("musicaPausada", "false");
+        } else {
+            musica.pause();
+            botao.textContent = "🔇";
+            localStorage.setItem("musicaPausada", "true");
+        }
+    });
+        </script>
+
+        
         
 </body>
 </html>

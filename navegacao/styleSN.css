@@ -274,24 +274,34 @@ footer {
   font-size: 16px;
 }
 
-/* =========================================
-   FUNDO DA PÁGINA
-========================================= */
 
-/*.pagina-jogo {
-  min-height: 100vh;
 
-  background: linear-gradient(
-    to bottom,
-    #000000 0%,
-    #080808 15%,
-    #181818 35%,
-    #353535 55%,
-    #5a5a5a 75%,
-    #858585 100%
-  );
+/*==========================
+  BOTÃO DA MUSICA DE FUNDO
+=========================== */
 
-  padding-top: 50px;
+.botao-musica {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: #000;
+  color: white;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  z-index: 9999;
 }
-*/
+
+.botao-musica:hover {
+  background-color: #333;
+}
 

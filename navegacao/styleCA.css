@@ -19,6 +19,11 @@ body, html {
   font-family: "Ungrow-Regular";
 }
 
+h1{
+  font-family: "Ungrow-Regular";
+  color: #050505;
+  margin: 0;
+}
 
 p{
   font-size: 25px;
@@ -290,7 +295,7 @@ p{
 
 .card-imagem img {
   width: 260px;        /* Defina a largura fixa para a imagem quadrada */
-  height: 220px;       /* Defina a altura fixa */
+  height: 400px;       /* Defina a altura fixa */
   object-fit: cover;   /* Faz a imagem preencher o quadrado sem distorcer */
   border-radius: 4px;  /* Suaviza as bordas da imagem */
 }
@@ -554,3 +559,32 @@ footer {
   font-size: 16px;
 }
 
+
+/*==========================
+  BOTÃO DA MUSICA DE FUNDO
+=========================== */
+
+.botao-musica {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: #000;
+  color: white;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  z-index: 9999;
+}
+
+.botao-musica:hover {
+  background-color: #333;
+}

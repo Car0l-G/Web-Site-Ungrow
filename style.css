@@ -774,3 +774,42 @@ footer {
     padding: 8px 12px !important;
   }
 }
+
+
+/*==========================
+  BOTÃO DA MUSICA DE FUNDO
+=========================== */
+
+.botao-musica {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: #000;
+  color: white;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  z-index: 9999;
+}
+
+.botao-musica:hover {
+  background-color: #333;
+}
+
+
+/*==========================
+  BOTÃO DO FORMULÁRIO DESABILITADO
+=========================== */
+.meu-formulario-customizado button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
