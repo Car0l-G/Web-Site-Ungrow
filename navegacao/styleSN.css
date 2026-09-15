@@ -116,6 +116,37 @@ body, html {
 }
 
 
+/* =========================================
+   MOLDURAS PARA FOTOS DE PERFIL
+========================================= */
+
+.foto-com-moldura {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.foto-perfil-quadrada {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+  display: block;
+}
+
+.moldura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+
+  z-index: 1; /* Garante que a moldura fique acima da foto */
+}
 
 /* =========================================
    BANNER DESTAQUE (RETÂNGULO GRANDE)
@@ -191,7 +222,17 @@ footer {
   height: auto;
 }
 
+.footer-menino-absoluto {
+  position: absolute;
+  right: 40px;         /* Distância da borda direita da tela */
+  top: 50%;            /* Alinha verticalmente ao centro */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical perfeito */
+  max-width: 120px;    /* Controle o tamanho da foto aqui */
+  height: auto;
 
+  max-width: 180px;    /* Aumente este valor (ex: 180px, 200px, 250px) */
+  height: auto;
+}
 
 .footer-links {
   display: flex;

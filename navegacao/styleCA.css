@@ -371,6 +371,24 @@ p{
   }
 }
 
+/* =========================================
+   MONSTRINhOS EMPILHADOS (IMAGEM ABAIXO DO BANNER)
+========================================= */
+
+.imagem-abaixo-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.imagem-abaixo-banner img {
+  width: 750px;
+  height: auto;
+  display: block;
+}
+
 
 /* =========================================
    RODAPÉ PADRÃO
@@ -483,6 +501,17 @@ footer {
   height: auto;
 }
 
+.footer-menino-absoluto {
+  position: absolute;
+  right: 40px;         /* Distância da borda direita da tela */
+  top: 50%;            /* Alinha verticalmente ao centro */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical perfeito */
+  max-width: 120px;    /* Controle o tamanho da foto aqui */
+  height: auto;
+
+  max-width: 180px;    /* Aumente este valor (ex: 180px, 200px, 250px) */
+  height: auto;
+}
 
 
 .footer-links {
