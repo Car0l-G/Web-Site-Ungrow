@@ -38,6 +38,8 @@ ARTES:
 Nossa equipe se esforçou bastante para fazer todas as artes vistas no Site. Nenhuma delas foi usada Inteligêcia Artificial. 
 A estrutura do site foi pensada para que o usuário tenha uma experiêcia única visitando nossa página, com muitos artifícios visuais memoráveis. 
 
+MÚSICA:
+Ao acessar o site, pode-se notar uma pequena caixa de som ao canto da página. Nela, o usuário pode ativar a música ambiente do site e desativar quando quiser. 
 
 DETALHES IMPORTANTES:
 
