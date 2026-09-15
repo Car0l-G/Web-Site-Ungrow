@@ -49,6 +49,8 @@ Todos os botões estão funcionando assim como o formulário de envio.
 O e-mail, no qual será o destino dos dados do formulário, ainda não foi cliado, portanto ele não está 100% completo.
 O mesmo pode ser dito das redes sociais no Rodapé. Nenhuma delas é existente, desta forma nenhuma delas direciona para um lugar específico. 
 
+A imagem colocada para representar nosso último Boss, o Louva-Deus, é somente uma referência e não exatamente nossa arte. Foi usado somente para representar onde a imagem será colocada posteriormente com nossa arte autoral.
+
 
 
 Este site foi feito com muito carinho pela nossa equipe e esperamos que gostem do nosso trabalho. 
