@@ -145,7 +145,7 @@ body, html {
   object-fit: contain;
   pointer-events: none;
 
-  z-index: 1; /* Garante que a moldura fique acima da foto */
+  z-index: 0; /* Garante que a moldura fique acima da foto */
 }
 
 /* =========================================
